@@ -14,6 +14,8 @@ for col in df.columns[1:]:  # Starting from the second column
 
 df["Moy"] = df.iloc[:, 1:].sum(axis=1) / 2
 
+df.sort_values(by=["Moy"])
+
 
 def highlight_specific_rows(indexes, color):
     def style_row(row):
